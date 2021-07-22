@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GunGun Events</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+      <a href="#" class="logo">GunGun events</a>
+      <ul>
+  	    <li><a href="#" class="active">Home</a></li>
+  	    <li><a href="#">About us</a></li>
+  	    <li><a href="#">Work</a></li>
+  	    <li><a href="#">Contact us</a></li>
+      </ul>
+    </header>
+    <section>
+    	<img src="stars.png" id="star">
+    	<img src="moon.png" id="moon">
+    	<h2 id="text">GunGun Events</h2>
+    	<img src="back.png" id="exp">
+    	<a href="#start" id="btn">Explore</a>
+    </section>
+    <div class="sec" id="start">
+    	<h1>Our Services</h1>
+    	<img src="line.png" class="line1">
+    <div class="container">
+         <div class="card">
+         	<div class="content">
+         		<h2>Wedding Photoshoot</h2>
+         		<p>Some Demostration of Wedding Shoots</p>
+         		<a href="#">Explore More</a>
+         	</div>
+         	<img src="card1.png">
+         </div>	
+         <div class="card">
+         	<div class="content">
+         		<h2>Event Orgainzer</h2>
+         		<p>All type of event will be organized by our team</p>
+         		<a href="#">Explore More</a>
+         	</div>
+         	<img src="om.png">
+         </div>	
+    </div>
+    <div class="hero">
+    	<h1>Video Gallery</h1>
+    	<img src="line.png" class="line">
+    	<div class="row">
+    		<div class="col">
+    			<div class="feature-img">
+    				<img src="mor.jpg" width="100%">
+    				<img src="play.png" class="play-btn" onclick="playvideo('')">
+    			</div>
+    		</div>
+    		<div class="col">
+    			<div class="small-img-row">
+    				<div class="small-img">
+    					<img src="back.jpg">
+    					<img src="play.png" class="play-btn" onclick="playvideo('')">
+    				</div>
+    				<p>How to add multiple videos in a website or <br> to make a video gallery</p>
+    			</div>
+    			<div class="small-img-row">
+    				<div class="small-img">
+    					<img src="exp.jpg">
+    					<img src="play.png" class="play-btn" onclick="playvideo('')">
+    				</div>
+    				<p>How to add multiple videos in a website or <br> to make a video gallery</p>
+    			</div>
+    			<div class="small-img-row">
+    				<div class="small-img">
+    					<img src="01.jpg">
+    					<img src="play.png" class="play-btn"  onclick="playvideo('')">
+    				</div>
+    				<p>How to add multiple videos in a website or <br> to make a video gallery</p>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <div class="video-player" id="videoplayer">
+    	<video width="100%" controls autoplay id="myvideo">
+    		<source src="" type="video/mp4">
+    	</video>
+    	<img src="close.png" class="close-btn" onclick="stopVideo()">
+    </div>
+
+
+    </div>
+
+    <script>
+    	let stars = document.getElementById('star');
+    	let moon = document.getElementById('moon');
+    	let exp = document.getElementById('exp');
+    	let text = document.getElementById('text');
+    	let btn = document.getElementById('btn');
+    	var videoplayer= document.getElementById('videoplayer');
+    	var myvideo=document.getElementById('myvideo');
+
+        function stopVideo(){
+        	videoplayer.style.display = "none";
+        }
+        function playvideo(file){
+        	myvideo.src = file;
+        	videoplayer.style.display = "block";
+        }
+
+    	window.addEventListener('scroll', function(){
+    		let value = window.scrollY;
+    		//stars.style.left = value + 0.25 + 'px';
+    		moon.style.top = value + 0.25 +'px';
+    		text.style.marginRight = value + 4 + 'px';
+    		//btn.style.marginTop = value + 1.5 + 'px';
+    	})
+    </script>
+</body>
+</html>
